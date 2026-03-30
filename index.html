@@ -511,7 +511,20 @@
         <div style="display:flex; flex-direction:column; gap:10px; min-width:260px;">
           <a class="btn btn-primary" href="mailto:hello@reservoice.tech?subject=ReserVoice%20Demo%20Request">hello@reservoice.tech</a>
           <a class="btn btn-secondary" href="mailto:hello@reservoice.tech?subject=Join%20ReserVoice%20Pilot">Join Pilot by Email</a>
-        </div>
+        
+      <div class="card" style="margin-top:24px; padding:24px;">
+        <h3 style="margin-top:0; color:var(--navy);">Quick inquiry form</h3>
+        <form action="mailto:hello@reservoice.tech" method="post" enctype="text/plain" style="display:grid; gap:12px; grid-template-columns:1fr 1fr;">
+          <input name="name" placeholder="Your name" style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit;" />
+          <input name="restaurant" placeholder="Restaurant name" style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit;" />
+          <input name="city" placeholder="City" style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit;" />
+          <input name="email" placeholder="Email address" style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit;" />
+          <input name="call_volume" placeholder="Reservation call volume" style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit; grid-column: span 2;" />
+          <textarea name="message" placeholder="Tell us a bit about your restaurant or what you want to explore" style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit; min-height:120px; grid-column: span 2;"></textarea>
+          <button class="btn btn-primary" type="submit" style="border:none; cursor:pointer; width:max-content;">Send Inquiry</button>
+        </form>
+      </div>
+
       </div>
     </section>
 
@@ -520,6 +533,7 @@
       <span data-lang="en" class="active-lang">AI phone receptionist for restaurants</span>
       <span data-lang="de">KI-Telefonrezeption für Restaurants</span>
       <span>Germany-first · India + Germany team</span>
+      <span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></span>
       <span>hello@reservoice.tech</span>
     </footer>
   </div>
