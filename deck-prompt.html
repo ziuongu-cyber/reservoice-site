@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReserVoice Deck Prompt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #001f5b;
+      --blue: #007bff;
+      --bg: #f7f8fc;
+      --panel: #ffffff;
+      --text: #0f172a;
+      --muted: #586173;
+      --line: #e3e9f3;
+      --shadow: 0 14px 38px rgba(15, 23, 42, 0.08);
+      --max: 980px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: linear-gradient(180deg, #fbfcff 0%, #f5f7fb 100%);
+      color: var(--text);
+    }
+    .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; padding: 32px 0 56px; }
+    .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+    .logo { width: 52px; height: 52px; border-radius: 14px; border: 1px solid var(--line); background: #fff; padding: 6px; box-shadow: var(--shadow); }
+    h1, h2 { font-family: "Playfair Display", Georgia, serif; color: var(--navy); margin: 0; letter-spacing: -0.04em; }
+    h1 { font-size: 52px; line-height: .95; }
+    h2 { font-size: 28px; margin-top: 28px; }
+    .sub { color: var(--muted); margin-top: 10px; font-size: 18px; line-height: 1.7; }
+    .card {
+      margin-top: 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+    .label {
+      display: inline-block;
+      background: #edf4ff;
+      color: #3157b7;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #1f2937;
+      margin: 0;
+    }
+    .copy-note { color: var(--muted); font-size: 14px; margin-top: 12px; }
+    a { color: var(--blue); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="brand">
+      <img class="logo" src="logo-icon.jpg" alt="ReserVoice logo" />
+      <div>
+        <h1>ReserVoice</h1>
+        <div class="sub">Shareable AI deck prompt for creating a premium ElevenLabs / startup grant presentation.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Prompt</div>
+      <pre>Create a premium 7-slide startup deck for a company called ReserVoice.
+
+The deck should feel like a top-tier European hospitality-tech startup: clean, elegant, minimal, premium, and modern — not generic AI startup clutter.
+
+Brand system to follow strictly
+- Brand name: ReserVoice
+- Primary colors:
+  - Deep Navy #001F5B
+  - Electric Blue #007BFF
+  - Cream White #F8F8F8
+- Typography:
+  - Primary display style: Elegant Serif
+  - Secondary/body/UI style: Clean Sans-Serif
+- Brand feel:
+  - premium European hospitality
+  - refined, minimal, credible
+  - modern tech with warmth
+  - no loud gradients, no cyberpunk, no generic AI neon clutter
+
+Logo / visual identity
+Use the provided ReserVoice identity direction:
+- elegant serif wordmark
+- icon mark that combines a subtle voice-wave / sound motif with hospitality/reservation symbolism
+- use the icon and wordmark consistently
+- apply them like a real brand system, not as random decoration
+
+Content structure
+Make exactly 7 slides:
+
+Slide 1 — Cover
+Title: ReserVoice
+Subtitle: AI phone receptionist for restaurants
+Supporting line: Germany-first | multilingual reservation workflows
+Tagline: Capture more reservation calls without pulling staff away from service.
+
+Slide 2 — Problem
+Title: Restaurants still lose bookings over the phone
+Body:
+During lunch rush and dinner service, staff often miss reservation calls because they are busy serving guests in person.
+
+Include key points:
+- missed bookings
+- interrupted service
+- slower front-of-house operations
+- poor guest experience
+- lost revenue from unanswered calls
+
+Slide 3 — Solution
+Title: ReserVoice answers reservation calls automatically
+Body:
+ReserVoice is building an AI phone receptionist for restaurants that can:
+- answer inbound reservation calls
+- capture booking details
+- handle cancellations
+- respond to simple guest questions
+- support multilingual guest interactions
+
+Closing line:
+Goal: make phone reservations feel natural, fast, and usable in real hospitality workflows.
+
+Slide 4 — Why voice matters
+Title: Voice is the product interface
+Body:
+Restaurant reservations already happen by phone. This is not a chatbot add-on — the conversation itself is the product experience.
+
+Include:
+- guests need to trust the call
+- conversations need to feel natural
+- response timing must feel fast
+- multilingual support matters in real urban restaurant markets
+
+Closing line:
+If the voice experience feels robotic or slow, the booking flow breaks.
+
+Slide 5 — Market focus
+Title: Starting with Germany
+Body:
+We are focusing first on restaurants in Germany, especially those serving multilingual customer bases.
+
+Include:
+- real reservation demand already exists
+- restaurants already rely on phone calls
+- multilingual guest communication is common
+- missed calls are a practical operations problem
+
+Slide 6 — Stage and team
+Title: Early prototype, focused team
+Body:
+Current stage:
+- early prototype in development
+- shaping the core voice experience
+- refining multilingual reservation flows
+- preparing for pilot testing with restaurants
+
+Team:
+- 2-person team
+- technical build led from India
+- Germany-based collaborator helping stay close to the local market and early customer reality
+
+Slide 7 — Why ElevenLabs
+Title: Why ElevenLabs is a strong fit
+Body:
+ReserVoice depends on natural multilingual voice conversations. ElevenLabs is a strong fit for the voice layer we want to deliver.
+
+Include:
+- accelerate testing
+- improve multilingual call quality
+- refine real reservation call flows
+- move faster toward pilot deployment
+
+Design instructions
+- Use lots of white/cream space
+- Keep layouts clean and premium
+- Use subtle iconography and restrained visuals
+- Use hospitality-tech visuals, not generic robots
+- Avoid stocky corporate clutter
+- Make it look grant-review ready
+- The deck should feel polished enough to send as a startup support application attachment
+
+Output goal
+The final deck should look like a real early-stage premium startup presentation, aligned tightly with the ReserVoice branding shown in the uploaded brand reference.</pre>
+      <div class="copy-note">Tip: also upload your ReserVoice brand reference image and website screenshot into the deck tool for better consistency.</div>
+    </div>
+
+    <div class="card">
+      <div class="label">Extra style note</div>
+      <pre>Keep every slide visually consistent with the ReserVoice identity: deep navy serif wordmark, electric blue accents, cream-white background, refined hospitality-tech feel, and minimal premium design. Avoid generic AI icons, overly futuristic visuals, crowded layouts, or random color changes.</pre>
+    </div>
+  </div>
+</body>
+</html>
