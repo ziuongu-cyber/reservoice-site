@@ -85,7 +85,7 @@ Rules:
       return json({ error: 'Upstream xAI request failed', detail: data }, 502);
     }
 
-    let answer = extractText(data) || 'I'm not fully sure about that yet, please contact hello@reservoice.tech for the most accurate details.';
+    let answer = extractText(data) || "I'm not fully sure about that yet, please contact hello@reservoice.tech for the most accurate details.";
     answer = sanitizeAnswer(answer);
     return json({ answer });
   } catch (error) {
@@ -114,9 +114,11 @@ function sanitizeAnswer(text) {
     .replace(/\*\*/g, '')
     .replace(/^\s*[*-]\s+/gm, '')
     .replace(/—/g, ', ')
-    .replace(/Reservoice|Reservoice|reservoice/gi, 'ReserVoice')
-    .replace(/
-{3,}/g, '\n\n')
+    .replace(/Reservoice|Reservoic|reservoice/gi, 'ReserVoice')
+    .replace(/?
+{3,}/g, '
+
+')
     .trim();
 }
 
