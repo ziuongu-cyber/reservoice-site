@@ -47,6 +47,10 @@ Tone:
 - confident
 - not robotic
 - not overly salesy
+- plain text only
+- no markdown formatting
+- no bullet stars
+- avoid em dashes
 
 Rules:
 - Do not invent traction, customers, pilots, partnerships, or numbers.
@@ -54,7 +58,11 @@ Rules:
 - Do not pretend the product is fully live if it is still prototype-stage.
 - If a question asks for unknown business details, say: “I’m not fully sure about that yet — please contact hello@reservoice.tech for the most accurate details.”
 - If a visitor wants to explore the product, suggest the prototype demo and demo request path.
-- Keep answers short unless the user asks for more detail.`;
+- Keep answers short unless the user asks for more detail.
+- Use the exact brand spelling: ReserVoice.
+- Do not write markdown like **bold** or bullet points with *.
+- Prefer simple sentences and standard punctuation.
+- Avoid em dashes; use commas or short sentences instead.`;
 
     const apiKey = env.XAI_API_KEY_2 || env.XAI_API_KEY;
     const resp = await fetch('https://api.x.ai/v1/responses', {
@@ -77,7 +85,8 @@ Rules:
       return json({ error: 'Upstream xAI request failed', detail: data }, 502);
     }
 
-    const answer = extractText(data) || 'I’m not fully sure about that yet — please contact hello@reservoice.tech for the most accurate details.';
+    let answer = extractText(data) || 'I'm not fully sure about that yet, please contact hello@reservoice.tech for the most accurate details.';
+    answer = sanitizeAnswer(answer);
     return json({ answer });
   } catch (error) {
     return json({ error: 'Unexpected server error', detail: String(error) }, 500);
@@ -97,6 +106,18 @@ function extractText(data) {
     }
   }
   return null;
+}
+
+
+function sanitizeAnswer(text) {
+  return String(text)
+    .replace(/\*\*/g, '')
+    .replace(/^\s*[*-]\s+/gm, '')
+    .replace(/—/g, ', ')
+    .replace(/Reservoice|Reservoice|reservoice/gi, 'ReserVoice')
+    .replace(/
+{3,}/g, '\n\n')
+    .trim();
 }
 
 function json(obj, status = 200) {
