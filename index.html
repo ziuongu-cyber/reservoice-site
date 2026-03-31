@@ -481,50 +481,55 @@
 
     <section id="contact">
       <div class="section-head">
-        <div class="kicker" data-lang="en" class="active-lang">Contact</div><div class="kicker" data-lang="de">Kontakt</div>
-        <h2 data-lang="en" class="active-lang">Request a demo or join the pilot program.</h2>
+        <div class="kicker" data-lang="en">Contact</div><div class="kicker" data-lang="de">Kontakt</div>
+        <h2 data-lang="en">Request a demo or join the pilot program.</h2>
         <h2 data-lang="de">Demo anfragen oder dem Pilotprogramm beitreten.</h2>
-        <div class="section-copy" data-lang="en" class="active-lang">If you run a restaurant or want to explore an early pilot, get in touch. We are currently focused on multilingual reservation workflows for the German market.</div>
+        <div class="section-copy" data-lang="en">If you run a restaurant or want to explore an early pilot, get in touch. We are currently focused on multilingual reservation workflows for the German market.</div>
         <div class="section-copy" data-lang="de">Wenn du ein Restaurant betreibst oder einen frühen Pilot testen möchtest, melde dich gern. Aktuell liegt unser Fokus auf mehrsprachigen Reservierungsabläufen für den deutschen Markt.</div>
       </div>
       <div class="grid-2">
         <div class="card quote-card">
-          <h3 data-lang="en" class="active-lang">Current stage</h3>
+          <h3 data-lang="en">Current stage</h3>
           <h3 data-lang="de">Aktueller Stand</h3>
-          <p data-lang="en" class="active-lang">ReserVoice is in early prototype development. We are shaping the core voice experience, refining multilingual reservation flows, and preparing for pilot testing with restaurants.</p>
+          <p data-lang="en">ReserVoice is in early prototype development. We are shaping the core voice experience, refining multilingual reservation flows, and preparing for pilot testing with restaurants.</p>
           <p data-lang="de">ReserVoice befindet sich in einer frühen Prototyp-Phase. Wir gestalten aktuell das Sprach-Erlebnis, verfeinern mehrsprachige Reservierungsabläufe und bereiten erste Pilottests mit Restaurants vor.</p>
         </div>
         <div class="card quote-card">
-          <h3 data-lang="en" class="active-lang">Team</h3>
+          <h3 data-lang="en">Team</h3>
           <h3 data-lang="de">Team</h3>
-          <p data-lang="en" class="active-lang">We are a 2-person team: technical build led from India, with Germany-based market understanding and early customer insight.</p>
+          <p data-lang="en">We are a 2-person team: technical build led from India, with Germany-based market understanding and early customer insight.</p>
           <p data-lang="de">Wir sind ein 2-Personen-Team: technischer Aufbau aus Indien, mit marktnaher Perspektive und frühem Kundenverständnis aus Deutschland.</p>
         </div>
       </div>
       <div class="card cta" style="margin-top:24px; align-items:flex-start;">
         <div>
-          <h3 data-lang="en" class="active-lang">Contact ReserVoice</h3>
+          <h3 data-lang="en">Contact ReserVoice</h3>
           <h3 data-lang="de">ReserVoice kontaktieren</h3>
-          <p data-lang="en" class="active-lang">For pilot interest, restaurant partnerships, or demo requests, email us directly and include your restaurant name, city, and average reservation call volume.</p>
-          <p data-lang="de">Für Pilotanfragen, Restaurantpartnerschaften oder Demo-Anfragen schreib uns direkt per E-Mail und nenne Restaurantname, Stadt und ungefähres Anrufvolumen für Reservierungen.</p>
+          <p data-lang="en">For pilot interest, restaurant partnerships, or demo requests, email us directly — or use the inquiry form below.</p>
+          <p data-lang="de">Für Pilotanfragen, Restaurantpartnerschaften oder Demo-Anfragen schreib uns direkt per E-Mail — oder nutze das Formular unten.</p>
         </div>
         <div style="display:flex; flex-direction:column; gap:10px; min-width:260px;">
           <a class="btn btn-primary" href="mailto:hello@reservoice.tech?subject=ReserVoice%20Demo%20Request">hello@reservoice.tech</a>
           <a class="btn btn-secondary" href="mailto:hello@reservoice.tech?subject=Join%20ReserVoice%20Pilot">Join Pilot by Email</a>
-        
+        </div>
+      </div>
       <div class="card" style="margin-top:24px; padding:24px;">
         <h3 style="margin-top:0; color:var(--navy);">Quick inquiry form</h3>
-        <form action="mailto:hello@reservoice.tech" method="post" enctype="text/plain" style="display:grid; gap:12px; grid-template-columns:1fr 1fr;">
-          <input name="name" placeholder="Your name" style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit;" />
-          <input name="restaurant" placeholder="Restaurant name" style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit;" />
+        <p style="margin:0 0 16px; color:var(--muted); line-height:1.7;">This form submits directly on-site and forwards your inquiry to our inbox via secure form handling.</p>
+        <form action="https://formsubmit.co/hello@reservoice.tech" method="POST" style="display:grid; gap:12px; grid-template-columns:1fr 1fr;">
+          <input type="hidden" name="_subject" value="New ReserVoice site inquiry" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://reservoice.tech/?submitted=1#contact" />
+          <input name="name" placeholder="Your name" required style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit;" />
+          <input name="restaurant" placeholder="Restaurant name" required style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit;" />
           <input name="city" placeholder="City" style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit;" />
-          <input name="email" placeholder="Email address" style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit;" />
-          <input name="call_volume" placeholder="Reservation call volume" style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit; grid-column: span 2;" />
-          <textarea name="message" placeholder="Tell us a bit about your restaurant or what you want to explore" style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit; min-height:120px; grid-column: span 2;"></textarea>
+          <input type="email" name="email" placeholder="Email address" required style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit;" />
+          <input name="call_volume" placeholder="Average reservation call volume" style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit; grid-column: span 2;" />
+          <textarea name="message" placeholder="Tell us a bit about your restaurant or what you want to explore" required style="padding:14px 16px; border:1px solid var(--line); border-radius:14px; font:inherit; min-height:120px; grid-column: span 2;"></textarea>
           <button class="btn btn-primary" type="submit" style="border:none; cursor:pointer; width:max-content;">Send Inquiry</button>
         </form>
-      </div>
-
+        <div id="form-success" style="display:none; margin-top:14px; color:#0a7a35; font-weight:600;">Thanks — your inquiry was submitted successfully.</div>
       </div>
     </section>
 
@@ -548,6 +553,12 @@
       localStorage.setItem('reservoice_lang', lang);
     }
     buttons.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.switch)));
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('submitted') === '1') {
+      const ok = document.getElementById('form-success');
+      if (ok) ok.style.display = 'block';
+      history.replaceState({}, '', window.location.pathname + window.location.hash);
+    }
     setLang(localStorage.getItem('reservoice_lang') || 'en');
   </script>
 </body>
